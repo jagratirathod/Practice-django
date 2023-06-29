@@ -1,0 +1,17 @@
+
+
+
+<div style="background-color: bisque;">
+<center> <br><br><br>   
+
+    <h1>Add Post</h1> <br>
+    <div style="width:300px;height:600px;" >
+
+    <form method="POST" action="{% url 'save_method:Posts' %}"  enctype="multipart/form-data">
+        {% csrf_token %} 
+        {{form}} 
+        <input type="submit" value="Add"> 
+    </form>
+</div>
+</center>
+</div>

@@ -1,0 +1,26 @@
+{% load custom_tags %}
+
+<html>
+  <head>
+    <title>Bootstrap demo</title>
+  </head>
+  <body>
+    <h1>Hello, world!</h1>
+    <h2>Total number of student :  {% total_stu %} </h2>
+
+    {% comment %} <h3>Student Name: {{ 'riya'|stud_name:"s.v.v.p"}} </h2> {% endcomment %}
+
+    {% comment %} <h3>Student Name: {{ 'riya:s.v.v.p:2000'|stud_name }}</h3> {% endcomment %}
+    
+    {% comment %} {% student %} {% endcomment %}
+    <div> 
+    {% for stud in studs %}
+    {% comment %} <h3>{{stud.name|stud_name:stud.school}}</h3>   {% endcomment %}
+    <h3>{{stud.name}}</h3> <br>
+    <h3>{{stud.school}}</h3> <br>
+    <h3>{{stud.fees}}</h3> <br>
+
+    {% endfor %}
+    </div>
+  </body>
+</html>
