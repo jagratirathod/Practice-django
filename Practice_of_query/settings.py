@@ -41,7 +41,8 @@ INSTALLED_APPS = [
     'custom_template_tag',
     'save_method',
     'signal_app',
-    'transaction_atomic'
+    'transaction_atomic',
+    'customize_admin'
 ]
 
 MIDDLEWARE = [
@@ -81,10 +82,41 @@ WSGI_APPLICATION = 'Practice_of_query.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
+        'ENGINE': 'django.db.backends.sqlite3', 
         'NAME': BASE_DIR / 'db.sqlite3',
-    }
+    } , 
+
+    'postgresql_db': {
+        'ENGINE': 'django.db.backends.postgresql',
+        'NAME': 'sample1',          # Replace with your database name
+        'USER': 'riya',      # Replace with your PostgreSQL username
+        'PASSWORD': 'riya123',  # Replace with your PostgreSQL password
+        'HOST': 'localhost',     # If PostgreSQL is running locally
+        'PORT': '5432',              # Leave it empty for default PostgreSQL port (5432)
+    },
+
+    'mysql_db': {
+        'ENGINE': 'django.db.backends.mysql',
+        'NAME': 'sample3',         
+        'USER': 'root',     
+        'PASSWORD': 'root', 
+        'HOST': 'localhost',    
+        'PORT': '3306',             
+    },
 }
+
+
+# DATABASES = {
+#     'default': {
+#         'ENGINE': 'django.db.backends.postgresql',
+#         'NAME': 'sample',          # Replace with your database name
+#         'USER': 'jagrati',      # Replace with your PostgreSQL username
+#         'PASSWORD': 'jagrati123',  # Replace with your PostgreSQL password
+#         'HOST': 'localhost',     # If PostgreSQL is running locally
+#         'PORT': '5432',              # Leave it empty for default PostgreSQL port (5432)
+#     }
+# }
+
 
 
 # Password validation

@@ -1,0 +1,4 @@
+Django==4.2.6
+psycopg2==2.9.9
+mysql-connector==2.2.9
+mysqlclient==2.2.0

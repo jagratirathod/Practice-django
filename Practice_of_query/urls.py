@@ -23,5 +23,7 @@ urlpatterns = [
     path('save_method/',include('save_method.urls')),
     path('signal_app/',include('signal_app.urls')),
     path('transaction_atomic/',include('transaction_atomic.urls')),
+    path('customize_admin/',include('customize_admin.urls')),
+
 ]
 

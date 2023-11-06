@@ -1,0 +1,32 @@
+{% extends 'admin/index.html' %}
+
+{% block content %}
+{% comment %} <button class="button" type="submit">Back</button><a> {% endcomment %}
+{% comment %} <a href=""> Back</a> {% endcomment %}
+
+<button class="button" type="submit" style="font:yellow";><a href=""> Back...</a></button><a> 
+   
+{% comment %} {{ block.super }} {% endcomment %}
+
+<table>
+    <tr>
+        <th>Name</th>
+        <th>Font_size</th>
+    </tr><br>
+
+    <tr cols="5">
+        <hr>
+    </tr> 
+
+
+    {% for row  in  wids %}
+    <tr>
+        <td>{{row.name}}</td> 
+        <td>{{row.font_size}}</td>
+    </tr>
+    {% endfor %} 
+</table> 
+
+{% endblock %}
+
+
