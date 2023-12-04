@@ -42,7 +42,8 @@ INSTALLED_APPS = [
     'save_method',
     'signal_app',
     'transaction_atomic',
-    'customize_admin'
+    'customize_admin',
+    'model_inheritance',
 ]
 
 MIDDLEWARE = [
