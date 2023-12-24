@@ -44,6 +44,7 @@ INSTALLED_APPS = [
     'transaction_atomic',
     'customize_admin',
     'model_inheritance',
+    'property_decorator'
 ]
 
 MIDDLEWARE = [

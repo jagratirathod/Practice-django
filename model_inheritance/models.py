@@ -39,10 +39,17 @@ class ExamCenter(models.Model):
     cname = models.CharField(max_length=70)
     city = models.CharField(max_length=70)
 
+    def __str__(self):
+        return self.cname
+
+
 class MyStudent(ExamCenter):
     name = models.CharField(max_length=70)
     roll = models.IntegerField()
 
+    def __str__(self):
+        return self.name
+    
 
 # Proxy model - 
 
@@ -55,6 +62,9 @@ class MyCenter(Center):
     class Meta:
         proxy = True
         ordering = ['id']
+
+
+
 
 
 

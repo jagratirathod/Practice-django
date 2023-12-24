@@ -25,5 +25,7 @@ urlpatterns = [
     path('transaction_atomic/',include('transaction_atomic.urls')),
     path('customize_admin/',include('customize_admin.urls')),
     path('model_inheritance/',include('model_inheritance.urls')),
+    path('property_decorator/',include('property_decorator.urls')),
+
 ]
 
